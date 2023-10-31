@@ -36,12 +36,11 @@ body::-webkit-scrollbar-thumb {
     /* roundness of the scroll thumb */
 }
 
-.slider {
-    display: flex;
-    width: 300%; /* Atualize isso para ser 100% vezes o número de imagens */
-    animation: slide 20s infinite linear;
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
 }
 
-.slider img {
-    flex: 1;
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
