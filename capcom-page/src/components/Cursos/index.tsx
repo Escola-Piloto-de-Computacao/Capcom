@@ -5,6 +5,7 @@ type Course = {
     alternativeTitle: string;
     details: string;
     prerequisites: string;
+    shadowBackgroundColor: string;
     id: number;
 };
 
@@ -12,7 +13,7 @@ const MiniCourse = ({ course }: { course: Course}) => {
     const [showDetails, setShowDetails] = useState(false);
 
     return (
-        <div className="p-4 border rounded-md shadow-md mx-8 my-4">
+        <div className="p-4 border rounded-md shadow-md mx-8 my-4" style={{ boxShadow: `0 0 3px ${course.shadowBackgroundColor}` }}>
             <h2 className="text-xl font-bold">{course.title}</h2>
             <p className="text-sm text-gray-500">{course.alternativeTitle}</p>
             <button

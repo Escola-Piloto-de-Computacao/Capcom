@@ -15,6 +15,7 @@ let courses = [
         Ao final do curso, os alunos construirão um robô capaz de se locomover automaticamente,
         com o auxílio de sensores.`,
         prerequisites: 'Não há pré-requisitos',
+        shadowBackgroundColor: '#00ff37',
         id: 1
     },
     {
@@ -23,6 +24,7 @@ let courses = [
         details: `Ensinar a teoria, as aplicacões e boas práticas para a
         ferramenta padrão do mercado, quando se fala em versionamento e controle de código.`,
         prerequisites: 'Não há pré-requisitos',
+        shadowBackgroundColor: '#ff0000',
         id: 2
     },
     {
@@ -30,7 +32,8 @@ let courses = [
         alternativeTitle: 'Introdução a automação com Python em Pyautogui',
         details: `Uma introdução automação na linguagem python utilizando
         artifícios de visão computacional, tratamento de imagens e a biblioteca Pyautogui.`,
-        prerequisites: 'Introdução a Lógica e Introdução a Programação.',
+        prerequisites: 'Introdução a Lógica e Introdução a Programação',
+        shadowBackgroundColor: '#ff00ff',
         id: 3
     },
     {
@@ -45,7 +48,8 @@ let courses = [
         incluindo estruturas de dados, operações básicas, manipulação de dados e visualização.
         Além disso, serão introduzidos aos pacotes e bibliotecas mais úteis para análise de dados,
         como o ggplot2 para visualização e o dplyr para manipulação de dados.`,
-        prerequisites: 'Não há pré-requisitos, porém alguma familiaridade com conceitos de estatísticas e programação pode ser útil.',
+        prerequisites: 'Não há pré-requisitos, porém alguma familiaridade com conceitos de estatísticas e programação pode ser útil',
+        shadowBackgroundColor: '#0000ff',
         id: 4
     },
     {
@@ -58,7 +62,8 @@ let courses = [
         a utilizar o Pandas para realizar tarefas essenciais, como importar dados, realizar
         operações de filtragem e agregação, visualizar informações estatísticas e muito
         mais.`,
-        prerequisites: 'Introdução a Lógica e Introdução a Programação.',
+        prerequisites: 'Introdução a Lógica e Introdução a Programação',
+        shadowBackgroundColor: '#ffff00',
         id: 5
     },
     {
@@ -68,6 +73,7 @@ let courses = [
         transformar e carregar dados(Processo de ETL(Extract, Transform, Load)). Aprenderemos,
         também, a criar Dashboards para a visualização de dados.`,
         prerequisites: 'Não há pré-requisitos',
+        shadowBackgroundColor: '#00ffff',
         id: 6
     },
     {
@@ -76,6 +82,7 @@ let courses = [
         details: `Nesse minicurso você aprenderá o básico de PhP e a utilizar o
         framework Laravel para criar aplicações web`,
         prerequisites: 'Não há pré-requisitos',
+        shadowBackgroundColor: '#ff7f00',
         id: 7
     },
     {
@@ -84,6 +91,7 @@ let courses = [
         details: `No minicurso, os alunos vão aprender a usar a ferramenta
         Figma para fins de designer web, ademais de conceitos básicos sobre web designer.`,
         prerequisites: 'Não há pré-requisitos',
+        shadowBackgroundColor: '#ff00ff',
         id: 8
     },
     {
@@ -95,6 +103,7 @@ let courses = [
         componentes reutilizáveis e adicionando interatividade com animações suaves. Inscreva-se
         agora e transforme suas ideias em interfaces incríveis!`,
         prerequisites: 'HTML, CSS e JavaScript',
+        shadowBackgroundColor: '#00ff00',
         id: 9
     },
     {
@@ -106,7 +115,8 @@ let courses = [
         exemplo da busca de vagas no linkedin, iremos aprender o que é web scraping, como
         páginas da web são estruturadas e como podemos criar robôs para realizar raspagem de
         dados delas de maneira fácil, prática e útil (afinal, ter um emprego é sempre bom, né?).`,
-        prerequisites: 'Python básico (definições de variáveis, tipos, condicionais e lista). Ter noções de HTML e CSS é interessante, mas não necessário.',
+        prerequisites: 'Python básico (definições de variáveis, tipos, condicionais e lista). Ter noções de HTML e CSS é interessante, mas não necessário',
+        shadowBackgroundColor: '#0000ff',
         id: 10
     },
     {
@@ -116,7 +126,8 @@ let courses = [
         API REST utilizando a linguagem Java com o framework Spring Boot, além de apresentar
         ao aluno os conceito inciais do framework spring boot, o minicurso contará com uma prática
         onde o aluno irá construir uma API REST junto com os instrutores.`,
-        prerequisites: 'Programação de Computadores e conhecimento básico em Java. É aconselhável as cadeiras de POO, BD e Redes.',
+        prerequisites: 'Programação de Computadores e conhecimento básico em Java. É aconselhável as cadeiras de POO, BD e Redes',
+        shadowBackgroundColor: '#ff0000',
         id: 11
     },
     {
@@ -124,6 +135,7 @@ let courses = [
         alternativeTitle: 'Conexão e consumo de API Rest',
         details: 'Aprenda a criar uma conexão com uma API Rest e como estruturar um service para consumir as informações e exibi-las em uma página web',
         prerequisites: 'Lógica de Programação, HTML, CSS e JavaScript',
+        shadowBackgroundColor: '#ff00ff',
         id: 12
     },
     {
@@ -134,6 +146,7 @@ let courses = [
         computacional. Na aula, veremos os axiomas dos números naturais, suas propriedades e
         como aplica-los aos nossos algoritmos.`,
         prerequisites: 'Não há pré-requisitos',
+        shadowBackgroundColor: '#00ffff',
         id: 13
     },
     {
@@ -148,6 +161,7 @@ let courses = [
         objetos e emitir sons; projeto e construção de um HUD (Head-Up Display) para o jogo;
         instalação do jogo em uma determinada plataforma.`,
         prerequisites: 'Programação de Computadores. Recomenda-se fortemente conhecimento em POO',
+        shadowBackgroundColor: '#0000ff',
         id: 14
     }
 ];
