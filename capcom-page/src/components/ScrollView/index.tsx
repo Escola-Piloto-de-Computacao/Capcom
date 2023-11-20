@@ -1,39 +1,23 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+import { Carousel } from 'antd';
 
 type Image = {
-    src: string;
-    alt: string;
+   src: string;
+   alt: string;
 };
 
-const ScrollView = ({ images }: { images: Image[] }) => {
-    const scrollRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (scrollRef.current) {
-                if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth / 2) {
-                    scrollRef.current.scrollLeft = 0;
-                } else {
-                    scrollRef.current.scrollLeft += 1;
-                }
-            }
-        }, 20); // Change this to adjust the speed of the carousel
-
-        return () => clearInterval(interval);
-    }, []);
-
-    return (
-        <div ref={scrollRef} className="flex overflow-x-scroll hide-scrollbar">
-            {[...images, ...images].map((image, index) => (
-                <img
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    className="inline-block w-full object-cover pt-6" // Change h value to adjust the height of the carousel
-                />
-            ))}
-        </div>
-    );
+type AppProps = {
+   images: Image[];
 };
+
+const ScrollView: React.FC<AppProps> = ({ images }) => (
+   <Carousel autoplay>
+      {images.map((image, index) => (
+         <div key={index} className="flex justify-center items-center h-96 overflow-hidden">
+            <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
+         </div>
+      ))}
+   </Carousel>
+);
 
 export default ScrollView;
