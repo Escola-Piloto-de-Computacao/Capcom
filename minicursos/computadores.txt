@@ -1,0 +1,65 @@
+WebScrapping - Abrir direto o jupyter por meio do buscar
+R - Abrir o Rstudio por meio do buscar e escolher a instalação default do sistema (mais em cima)
+
+Lab 3 (4/24PC)
+
+sem wifi: 1
+reparando infinito: 1
+sem monitor ligando: 2
+
+-------------------------------------------------------------------------------------------
+Lab 5 (6/24 PC)
+
+- Computador da frente está sem funcionar
+
+sem wifi:
+- PC03
+- PC10
+- PC11
+- PC12
+- PC13
+- PC25
+
+-------------------------------------------------------------------------------------------
+Lab 4 (11/48 PC)
+
+problemas de hdmi:
+- PC14
+- PC41
+- PC31
+
+pc n liga:
+- PC08
+- PC21
+- PC43
+- PC48
+
+problema no sistema:
+- PC34
+
+sem wifi:
+- PC22
+- PC35
+- PC42
+
+-------------------------------------------------------------------------------------------
+Lab 6 (2/?)
+
+só ubuntu:
+- PC 14
+- PC26
+
+
+Lab 7 (?/48)
+
+sem ligar: 2
+
+sem wifi:
+- PC11
+
+teclado com mau contato:
+- PC27
+
+sem data correta: 2
+
+sem cabos: 10

@@ -4,6 +4,37 @@ import Welcome from './components/Welcome';
 import Cursos from './components/Cursos';
 import Inscricoes from './components/Inscricoes';
 import Footer from './components/Footer';
+import paulo from './images/palestrantes/pauloTeoria.jpeg';
+import pedro from './images/palestrantes/pedroReact.jpeg';
+
+type Course = {
+   title: string;
+   alternativeTitle: string;
+   longerTitle?: string;
+   details: string;
+   prerequisites: string;
+   shadowBackgroundColor: string;
+   dia: string;
+   data: string;
+   courseImage: string;
+   id: number;
+   palestrante1: {
+      nome: string;
+      frase: string;
+      foto: string;
+      instagram: string;
+      linkedin: string;
+      github: string;
+   };
+   palestrante2?: {
+      nome: string;
+      frase: string;
+      foto: string;
+      instagram: string;
+      linkedin: string;
+      github: string;
+   };
+};
 
 let courses = [
    {
@@ -16,16 +47,55 @@ let courses = [
         com o auxílio de sensores.`,
       prerequisites: 'Não há pré-requisitos',
       shadowBackgroundColor: '#00ff37',
-      id: 1
+      dia: 'Quarta',
+      data: "29/11",
+      courseImage: '',
+      id: 1,
+      palestrante1: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      },
+      palestrante2: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      }
    },
    {
       title: 'Github',
       alternativeTitle: 'Git e Github – Noções e boas práticas',
+      longerTitle: 'Git e Github',
       details: `Ensinar a teoria, as aplicacões e boas práticas para a
         ferramenta padrão do mercado, quando se fala em versionamento e controle de código.`,
       prerequisites: 'Não há pré-requisitos',
       shadowBackgroundColor: '#ff0000',
-      id: 2
+      dia: 'Quinta',
+      data: "30/11",
+      courseImage: '',
+      id: 2,
+      palestrante1: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      },
+      palestrante2: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      }
    },
    {
       title: 'Python Pyautogui',
@@ -34,7 +104,26 @@ let courses = [
         artifícios de visão computacional, tratamento de imagens e a biblioteca Pyautogui.`,
       prerequisites: 'Introdução a Lógica e Introdução a Programação',
       shadowBackgroundColor: '#ff00ff',
-      id: 3
+      dia: 'Sexta',
+      data: "01/12",
+      courseImage: '',
+      id: 3,
+      palestrante1: {
+         nome: "Artur Segantini",
+         frase: "Entusiasta de worldbuilding e amante de programação orientada a objetos",
+         foto: "",
+         instagram: "@artur_sals",
+         linkedin: "",
+         github: "https://github.com/ARTSALT"
+      },
+      palestrante2: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      }
    },
    {
       title: 'R',
@@ -50,7 +139,26 @@ let courses = [
         como o ggplot2 para visualização e o dplyr para manipulação de dados.`,
       prerequisites: 'Não há pré-requisitos, porém alguma familiaridade com conceitos de estatísticas e programação pode ser útil',
       shadowBackgroundColor: '#0000ff',
-      id: 4
+      dia: 'Quarta',
+      data: "29/11",
+      courseImage: '',
+      id: 4,
+      palestrante1: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      },
+      palestrante2: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      }
    },
    {
       title: 'Python Pandas',
@@ -64,7 +172,18 @@ let courses = [
         mais.`,
       prerequisites: 'Introdução a Lógica e Introdução a Programação',
       shadowBackgroundColor: '#ffff00',
-      id: 5
+      dia: 'Quinta',
+      data: "30/11",
+      courseImage: '',
+      id: 5,
+      palestrante1: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      },
    },
    {
       title: 'PowerBI',
@@ -74,7 +193,26 @@ let courses = [
         também, a criar Dashboards para a visualização de dados.`,
       prerequisites: 'Não há pré-requisitos',
       shadowBackgroundColor: '#00ffff',
-      id: 6
+      dia: 'Sexta',
+      data: "01/12",
+      courseImage: '',
+      id: 6,
+      palestrante1: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      },
+      palestrante2: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      }
    },
    {
       title: 'PHP',
@@ -83,7 +221,26 @@ let courses = [
         framework Laravel para criar aplicações web`,
       prerequisites: 'Não há pré-requisitos',
       shadowBackgroundColor: '#ff7f00',
-      id: 7
+      dia: 'Quarta',
+      data: "29/11",
+      courseImage: '',
+      id: 7,
+      palestrante1: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      },
+      palestrante2: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      }
    },
    {
       title: 'Figma',
@@ -92,11 +249,23 @@ let courses = [
         Figma para fins de designer web, ademais de conceitos básicos sobre web designer.`,
       prerequisites: 'Não há pré-requisitos',
       shadowBackgroundColor: '#ff00ff',
-      id: 8
+      dia: 'Quinta',
+      data: "30/11",
+      courseImage: '',
+      id: 8,
+      palestrante1: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      },
    },
    {
       title: 'React',
       alternativeTitle: 'Desenvolvimento Web com React Typescript e TailwindCSS',
+      longerTitle: 'Framework ReactTSX e Biblioteca TailwindCSS',
       details: `Domine a simplicidade elegante da criação de interfaces web
         com Tailwind CSS e React! Este curso prático e envolvente é a sua porta de entrada para
         aprender a integrar o poder do Tailwind CSS e React, criando interfaces responsivas,
@@ -104,7 +273,26 @@ let courses = [
         agora e transforme suas ideias em interfaces incríveis!`,
       prerequisites: 'HTML, CSS e JavaScript',
       shadowBackgroundColor: '#00ff00',
-      id: 9
+      dia: 'Sexta',
+      data: "01/12",
+      courseImage: '',
+      id: 9,
+      palestrante1: {
+         nome: "Pedro Figueira",
+         frase: "",
+         foto: pedro,
+         instagram: "https://www.instagram.com/pedro_fbv/",
+         linkedin: "",
+         github: "https://github.com/PepeuFBV"
+      },
+      palestrante2: {
+         nome: "Wender Enzo",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      }
    },
    {
       title: 'Python Web Scraping',
@@ -117,7 +305,26 @@ let courses = [
         dados delas de maneira fácil, prática e útil (afinal, ter um emprego é sempre bom, né?).`,
       prerequisites: 'Python básico (definições de variáveis, tipos, condicionais e lista). Ter noções de HTML e CSS é interessante, mas não necessário',
       shadowBackgroundColor: '#0000ff',
-      id: 10
+      dia: 'Quarta',
+      data: "29/11",
+      courseImage: '',
+      id: 10,
+      palestrante1: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      },
+      palestrante2: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      }
    },
    {
       title: 'Java SpringBoot',
@@ -128,7 +335,26 @@ let courses = [
         onde o aluno irá construir uma API REST junto com os instrutores.`,
       prerequisites: 'Programação de Computadores e conhecimento básico em Java. É aconselhável as cadeiras de POO, BD e Redes',
       shadowBackgroundColor: '#ff0000',
-      id: 11
+      dia: 'Quarta',
+      data: "29/11",
+      courseImage: '',
+      id: 11,
+      palestrante1: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      },
+      palestrante2: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      }
    },
    {
       title: 'API Rest',
@@ -136,22 +362,50 @@ let courses = [
       details: 'Aprenda a criar uma conexão com uma API Rest e como estruturar um service para consumir as informações e exibi-las em uma página web',
       prerequisites: 'Lógica de Programação, HTML, CSS e JavaScript',
       shadowBackgroundColor: '#ff00ff',
-      id: 12
+      dia: 'Sexta',
+      data: "01/12",
+      courseImage: '',
+      id: 12,
+      palestrante1: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      },
+      palestrante2: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      }
    },
    {
       title: 'Teoria dos Números',
       alternativeTitle: 'Teoria dos Números: Como se introduzir na matemática computacional',
-      details: `Apresentação a Teoria dos Números, um campo
-        de matemática pura, fundamental para lidar com os problemas da matemática
-        computacional. Na aula, veremos os axiomas dos números naturais, suas propriedades e
-        como aplica-los aos nossos algoritmos.`,
+      details: "No minicurso de Teoria dos Números será apresentada umas das áreas mais puras da matemática. Na aula, as operações e características básicas dos números inteiros serão construídas com axiomas e provas formais, demonstrando os fundamentos que constroem as exatas. Além disso, será feita uma contextualização do conteúdo com a matemática computacional em tópicos como bases numéricas, operações aritméticas e mais.",
       prerequisites: 'Não há pré-requisitos',
       shadowBackgroundColor: '#00ffff',
-      id: 13
+      dia: 'Quinta',
+      data: "30/11",
+      courseImage: '',
+      id: 13,
+      palestrante1: {
+         nome: "Paulo Andrade",
+         frase: "Estudante de computação que adora fazer códigos, cálculos e aviões.",
+         foto: paulo,
+         instagram: "",
+         linkedin: "https://www.linkedin.com/in/andrade-paulo/",
+         github: "https://github.com/andrade-paulo"
+      },
    },
    {
       title: 'Unity',
       alternativeTitle: 'Introdução ao motor de jogos Unity',
+      longerTitle: 'Motor de jogos Unity',
       details: `Este é um minicurso que busca apresentar os rudimentos do motor de jogos Unity. Para isto,
         toma-se como plano de fundo o desenvolvimento de um jogo 3D em particular para abordar
         os seguintes aspectos: modelo geral de construção de um jogo (gameobjects em cenas);
@@ -162,7 +416,57 @@ let courses = [
         instalação do jogo em uma determinada plataforma.`,
       prerequisites: 'Programação de Computadores. Recomenda-se fortemente conhecimento em POO',
       shadowBackgroundColor: '#0000ff',
-      id: 14
+      dia: 'Quinta',
+      data: "30/11",
+      courseImage: '',
+      id: 14,
+      palestrante1: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      },
+      palestrante2: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      }
+   },
+   {
+      title: "Redes Neurais",
+      alternativeTitle: "Sua primeira rede neural sem uma linha de código",
+      details: `O curso aborda o desenvolvimento from scratch de uma rede
+      neural classificatória. Para tal, utilizaremos uma aplicação web chamada Edge Impulse.
+      Aprenderemos sobre criação de database, divisão entre teste/treino/validação, como utilizar
+      o celular para fomentar o database, como é a arquitetura de uma NN (Neural Network), e
+      muito mais! Tudo isso, sem a necessidade de uma linha de código.`,
+      prerequisites: "Não há pré-requisitos",
+      shadowBackgroundColor: '',
+      dia: 'Sexta',
+      data: "01/12",
+      courseImage: '',
+      id: 15,
+      palestrante1: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      },
+      palestrante2: {
+         nome: "",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: ""
+      }
    }
 ];
 
@@ -181,12 +485,31 @@ let scrollViewImages = [
    },
 ];
 
+function addCourses(quarta: Course[] = [], quinta: Course[] = [], sexta: Course[] = []) {
+
+   for (let course of courses)
+      if (course.dia === 'Quarta') {
+         quarta.push(course);
+      } else if (course.dia === 'Quinta') {
+         quinta.push(course);
+      } else if (course.dia === 'Sexta') {
+         sexta.push(course);
+      }
+}
+
 function App() {
+
+   const Quarta: Course[] = [];
+   const Quinta: Course[] = [];
+   const Sexta: Course[] = [];
+
+   addCourses(Quarta, Quinta, Sexta);
+
    return (
-      <div className="App">
+      <div className="App overflow-x-hidden">
          <Header />
          <Welcome images={scrollViewImages} />
-         <Cursos courses={courses} />
+         <Cursos quarta={Quarta} quinta={Quinta} sexta={Sexta} />
          <Inscricoes />
          <Footer />
       </div>
