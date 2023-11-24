@@ -6,6 +6,19 @@ import Inscricoes from './components/Inscricoes';
 import Footer from './components/Footer';
 import paulo from './images/palestrantes/pauloTeoria.jpeg';
 import pedro from './images/palestrantes/pedroReact.jpeg';
+import artur from './images/palestrantes/ArturPyAuto.png';
+import vinicius from './images/palestrantes/ViniciusPyAuto.jpeg';
+import joao from './images/palestrantes/JoaoRobotica.jpeg';
+import sarah from './images/palestrantes/SarahRobotica.jpeg';
+import lucas from './images/palestrantes/LucasR.jpg';
+import joas from './images/palestrantes/JoasR.jpg';
+import clara from './images/palestrantes/ClaraPandas.jpg';
+import caio from './images/palestrantes/caioPHP.jpg';
+import rafael from './images/palestrantes/RafaelPHP.jpg';
+import william from './images/palestrantes/WilliamFigma.jpeg';
+import joaog from './images/palestrantes/JoaoSpring.jpeg';
+import edson from './images/palestrantes/EdsonAPI.jpeg';
+import victor from './images/palestrantes/VictorRedes.jpeg';
 
 type Course = {
    title: string;
@@ -52,20 +65,20 @@ let courses = [
       courseImage: '',
       id: 1,
       palestrante1: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "João Lucas",
+         frase: "Robótica educacional. Desenvolvimento em Java, C++ e Lego Scratch.",
+         foto: joao,
          instagram: "",
          linkedin: "",
-         github: ""
+         github: "https://github.com/G4ldin0"
       },
       palestrante2: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "Sarah Tomaz",
+         frase: "Professora de robótica educacional, apaixonada por machine learning",
+         foto: sarah,
          instagram: "",
          linkedin: "",
-         github: ""
+         github: "https://github.com/SarahTomaz"
       }
    },
    {
@@ -96,12 +109,11 @@ let courses = [
          linkedin: "",
          github: ""
       }
-   },
+   }, //falta info de github ambos
    {
       title: 'Python Pyautogui',
       alternativeTitle: 'Introdução a automação com Python em Pyautogui',
-      details: `Uma introdução automação na linguagem python utilizando
-        artifícios de visão computacional, tratamento de imagens e a biblioteca Pyautogui.`,
+      details: "Desperte o potencial visual do seu computador com nosso curso envolvente de PyAutoGUI em Python! Em um mergulho fascinante pela visão computacional, você aprenderá a dotar seu sistema com 'olhos' através da poderosa biblioteca PyAutoGUI. Desbrave as fronteiras da automação, desvendando segredos que transformarão sua experiência digital. Junte-se a nós e liberte o poder visual do seu Python!",
       prerequisites: 'Introdução a Lógica e Introdução a Programação',
       shadowBackgroundColor: '#ff00ff',
       dia: 'Sexta',
@@ -111,18 +123,18 @@ let courses = [
       palestrante1: {
          nome: "Artur Segantini",
          frase: "Entusiasta de worldbuilding e amante de programação orientada a objetos",
-         foto: "",
+         foto: artur,
          instagram: "@artur_sals",
          linkedin: "",
          github: "https://github.com/ARTSALT"
       },
       palestrante2: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "Vinicius Gabriel",
+         frase: "Sou estudante de ciência da computação do 4° período",
+         foto: vinicius,
          instagram: "",
          linkedin: "",
-         github: ""
+         github: "https://github.com/FolkBlues7"
       }
    },
    {
@@ -144,20 +156,20 @@ let courses = [
       courseImage: '',
       id: 4,
       palestrante1: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "Lucas Silva",
+         frase: "Técnico em Informática pelo IFRN,  aluno do 2° período de Ciência da Computação UFERSA",
+         foto: lucas,
          instagram: "",
          linkedin: "",
-         github: ""
+         github: "https://github.com/Lucassilv7"
       },
       palestrante2: {
-         nome: "",
-         frase: "",
-         foto: "",
-         instagram: "",
-         linkedin: "",
-         github: ""
+         nome: "Joas Gabriel",
+         frase: "Estudante de ciência da computação, segundo período, e membro da Escola Piloto de Computação",
+         foto: joas,
+         instagram: "https://www.instagram.com/joasgabriel/",
+         linkedin: "https://www.linkedin.com/in/jo%C3%A1s-barros-907990172/",
+         github: "https://github.com/joas-barros"
       }
    },
    {
@@ -177,12 +189,12 @@ let courses = [
       courseImage: '',
       id: 5,
       palestrante1: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "Clara Letícia",
+         frase: "Apaixonada por gatos e aspirante a cientista de dados",
+         foto: clara,
          instagram: "",
          linkedin: "",
-         github: ""
+         github: "github.com/ClaraLeticia"
       },
    },
    {
@@ -206,14 +218,14 @@ let courses = [
          github: ""
       },
       palestrante2: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "Lucas Silva",
+         frase: "Técnico em Informática pelo IFRN,  aluno do 2° período de Ciência da Computação UFERSA",
+         foto: lucas,
          instagram: "",
          linkedin: "",
-         github: ""
+         github: "https://github.com/Lucassilv7"
       }
-   },
+   }, //falta patrick
    {
       title: 'PHP',
       alternativeTitle: 'Laravel: Framework PHP Para desenvolvimento WEB',
@@ -226,20 +238,20 @@ let courses = [
       courseImage: '',
       id: 7,
       palestrante1: {
-         nome: "",
-         frase: "",
-         foto: "",
-         instagram: "",
-         linkedin: "",
-         github: ""
+         nome: "Caio Anderson",
+         frase: "Estudante de Ciência da Computação e Técnico de Informática. Apaixonado por explorar os desafios do mundo da computação, ansioso para aprender, colaborar e contribuir para o universo em constante evolução da tecnologia.",
+         foto: caio,
+         instagram: "https://www.instagram.com/caioamm/",
+         linkedin: "https://www.linkedin.com/in/caio-anderson-martins-1aab821a5/",
+         github: "https://github.com/CaioAndersonMM"
       },
       palestrante2: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "Rafael Lucas",
+         frase: "Estudante de ciência da computação, sempre tentando aprender um pouco de tudo e melhorar as minhas habilidades.",
+         foto: rafael,
          instagram: "",
          linkedin: "",
-         github: ""
+         github: "https://github.com/Rafaellucasaz"
       }
    },
    {
@@ -254,11 +266,11 @@ let courses = [
       courseImage: '',
       id: 8,
       palestrante1: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "William Diniz",
+         frase: "Prazer, sou entusiasta do mundo tecnológico visual.",
+         foto: william,
          instagram: "",
-         linkedin: "",
+         linkedin: "https://www.linkedin.com/in/william-diniz-praxedes-sales-a79147240/",
          github: ""
       },
    },
@@ -278,22 +290,22 @@ let courses = [
       courseImage: '',
       id: 9,
       palestrante1: {
+         nome: "Wender Enzo",
+         frase: "",
+         foto: "",
+         instagram: "",
+         linkedin: "",
+         github: "https://github.com/wenderenzo123"
+      },
+      palestrante2: {
          nome: "Pedro Figueira",
          frase: "",
          foto: pedro,
          instagram: "https://www.instagram.com/pedro_fbv/",
          linkedin: "",
          github: "https://github.com/PepeuFBV"
-      },
-      palestrante2: {
-         nome: "Wender Enzo",
-         frase: "",
-         foto: "",
-         instagram: "",
-         linkedin: "",
-         github: ""
       }
-   },
+   }, //falta info de wender
    {
       title: 'Python Web Scraping',
       alternativeTitle: 'Encontrando vagas no Linkedin através de raspagem de dados',
@@ -310,22 +322,14 @@ let courses = [
       courseImage: '',
       id: 10,
       palestrante1: {
-         nome: "",
-         frase: "",
-         foto: "",
-         instagram: "",
-         linkedin: "",
-         github: ""
-      },
-      palestrante2: {
-         nome: "",
+         nome: "Ryllari Raianne",
          frase: "",
          foto: "",
          instagram: "",
          linkedin: "",
          github: ""
       }
-   },
+   }, //falta info de ryllari
    {
       title: 'Java SpringBoot',
       alternativeTitle: 'Introdução a programação web com Spring Boot',
@@ -340,22 +344,22 @@ let courses = [
       courseImage: '',
       id: 11,
       palestrante1: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "João Gonçalo",
+         frase: "Show me the code",
+         foto: joaog,
          instagram: "",
          linkedin: "",
          github: ""
       },
       palestrante2: {
-         nome: "",
+         nome: "Thiago Henrique",
          frase: "",
          foto: "",
          instagram: "",
          linkedin: "",
          github: ""
       }
-   },
+   }, //falta info de thiago e joao
    {
       title: 'API Rest',
       alternativeTitle: 'Conexão e consumo de API Rest',
@@ -367,20 +371,12 @@ let courses = [
       courseImage: '',
       id: 12,
       palestrante1: {
-         nome: "",
-         frase: "",
-         foto: "",
-         instagram: "",
-         linkedin: "",
-         github: ""
-      },
-      palestrante2: {
-         nome: "",
-         frase: "",
-         foto: "",
-         instagram: "",
-         linkedin: "",
-         github: ""
+         nome: "Edson Cesar",
+         frase: "Pesquisador e especialista Front-End no laboratório de inovação tecnologica em saúde, Co Fundador e CEO da Godev Company, Startup voltada para idealização, maturação e desenvolvimento de software",
+         foto: edson,
+         instagram: "https://www.instagram.com/edsonalencarc/",
+         linkedin: "https://www.linkedin.com/in/edson-allencar/",
+         github: "https://github.com/Edsonalencar"
       }
    },
    {
@@ -427,16 +423,8 @@ let courses = [
          instagram: "",
          linkedin: "",
          github: ""
-      },
-      palestrante2: {
-         nome: "",
-         frase: "",
-         foto: "",
-         instagram: "",
-         linkedin: "",
-         github: ""
       }
-   },
+   }, //pedir a danielle
    {
       title: "Redes Neurais",
       alternativeTitle: "Sua primeira rede neural sem uma linha de código",
@@ -452,21 +440,13 @@ let courses = [
       courseImage: '',
       id: 15,
       palestrante1: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "Victor Benoiston",
+         frase: "Mestrando em Engenharia da Computação, com ênfase em web semântica e ontology-driven development. Também atua como desenvolvedor Full-Stack, com tecnologias como Python, Js (React), Ruby, etc",
+         foto: victor,
          instagram: "",
          linkedin: "",
-         github: ""
+         github: "https://github.com/VictorBenoiston"
       },
-      palestrante2: {
-         nome: "",
-         frase: "",
-         foto: "",
-         instagram: "",
-         linkedin: "",
-         github: ""
-      }
    }
 ];
 

@@ -67,10 +67,25 @@ const MiniCourse = ({ course }: { course: Course }) => {
             onCancel={() => setModalOpen(false)}
             okButtonProps={{ style: { display: 'none' } }}
             cancelButtonProps={{ style: { display: 'none' } }}
+            className="modal-width"
          >
-            <div className="grid grid-cols-2 pt-8">
-               <p className="text-justify">{course.details}</p>
-               <Palestrantes palestrante1={course.palestrante1} palestrante2={course.palestrante2} />
+            <div className="flex pt-8 gap-12">
+               <div>
+                  <p className="text-justify text-sm md:text-lg lg:text-xl font-normal flex-grow" style={{ flexBasis: '0', flexGrow: '2.5' }}>{course.details}</p>
+                  <button
+                     type="button"
+                     className="px-8 py-3 mt-7 ml-5 font-semibold rounded bg-sky-400 text-black"
+                     onClick={() => {
+                        const element = document.getElementById('Inscricoes');
+                        if (element) element.scrollIntoView({ behavior: 'smooth' });
+                     }}
+                  >
+                     Inscrever-se!
+                  </button>
+               </div>
+               <div style={{ flexBasis: '0', flexGrow: '1' }}>
+                  <Palestrantes palestrante1={course.palestrante1} palestrante2={course.palestrante2} />
+               </div>
             </div>
          </Modal>
       </div>

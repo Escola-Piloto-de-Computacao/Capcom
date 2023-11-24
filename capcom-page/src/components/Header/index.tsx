@@ -1,30 +1,18 @@
-import { MdHome } from "react-icons/md";
-import { FaLightbulb } from "react-icons/fa6";
-import { MdEvent } from "react-icons/md";
-import { IoPeopleSharp } from "react-icons/io5";
 import Hamburger from "../Hamburger";
 import capcomminilogo from '../../images/capcom-logo.png'
 
 export const refs = [
-   /*{
-      title: "Home",
-      href: "#Home",
-      Icon: MdHome,
-   },*/
    {
       title: "Bem-Vindo",
       href: "#Bemvindo",
-      Icon: IoPeopleSharp,
    },
    {
       title: "Minicursos",
       href: "#Minicursos",
-      Icon: FaLightbulb,
    },
    {
       title: "Inscrições",
       href: "#Inscricoes",
-      Icon: MdEvent,
    }
 ];
 
