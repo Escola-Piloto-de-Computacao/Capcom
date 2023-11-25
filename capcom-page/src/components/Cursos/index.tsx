@@ -151,7 +151,7 @@ const MiniCoursesView = ({ quarta, quinta, sexta }: CourseComponentProps) => {
             <a onClick={() => handleClick('Todos')} className={`flex items-center flex-shrink-0 px-5 py-2 border-b-4 cursor-pointer font-medium ${selectedLink === 'Todos' ? 'border-y-sky-300' : 'border-gray-800'}`}>todos</a>
          </div>
          <div className="text-start grid grid-cols-12" >
-            <div className="bg-gray-400 inline-flex items-center p-2 rounded-md col-start-2 col-span-2">
+            <div className="flex items-center p-2 rounded-md col-start-3 col-span-3">
                <Switch
                   className='custom-switch'
                   onChange={(checked) => setIsSwitchActivated(checked)

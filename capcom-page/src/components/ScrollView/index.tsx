@@ -11,10 +11,10 @@ type AppProps = {
 };
 
 const ScrollView: React.FC<AppProps> = ({ images }) => (
-   <Carousel autoplay speed={2250} autoplaySpeed={5000}>
+   <Carousel autoplay speed={2250} autoplaySpeed={5000} >
       {images.map((image, index) => (
          <div key={index} className="flex justify-center items-center h-96 overflow-hidden">
-            <img src={image.src} alt={image.alt} className="w-full h-full object-cover " />
+            <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
          </div>
       ))}
    </Carousel>
