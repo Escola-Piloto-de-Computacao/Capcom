@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button, Modal } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { Modal, Switch } from 'antd';
 import Palestrantes from './Palestrantes';
 
 type Course = {
@@ -11,6 +11,7 @@ type Course = {
    shadowBackgroundColor: string;
    dia: string;
    data: string;
+   publicoGeral: boolean;
    id: number;
    palestrante1: {
       nome: string;
@@ -69,9 +70,12 @@ const MiniCourse = ({ course }: { course: Course }) => {
             cancelButtonProps={{ style: { display: 'none' } }}
             className="modal-width"
          >
-            <div className="flex pt-8 gap-12">
+            <div className="flex gap-12">
                <div>
-                  <p className="text-justify text-sm md:text-lg lg:text-xl font-normal flex-grow" style={{ flexBasis: '0', flexGrow: '2.5' }}>{course.details}</p>
+                  <h1 className="text-lg font-light">{course.alternativeTitle}</h1>
+                  <p className="text-justify text-sm md:text-lg lg:text-lg font-normal flex-grow pt-8" style={{ flexBasis: '0', flexGrow: '2.5' }}>{course.details}</p>
+                  <h2 className="pt-6 text-lg font-semibold">Pré-Requesitos:</h2>
+                  <p className="pt-1">{course.prerequisites}</p>
                   <button
                      type="button"
                      className="px-8 py-3 mt-7 ml-5 font-semibold rounded bg-sky-400 text-black"
@@ -94,28 +98,46 @@ const MiniCourse = ({ course }: { course: Course }) => {
 
 const MiniCoursesView = ({ quarta, quinta, sexta }: CourseComponentProps) => {
    const [selectedLink, setSelectedLink] = useState<string>('Todos');
+   const [coursesToShow, setCoursesToShow] = useState<Course[]>([]);
+   const [isSwitchActivated, setIsSwitchActivated] = useState<boolean>(false);
+
+   function filterCourses(courses: Course[]): Course[] {
+      return courses.filter(course => course.publicoGeral);
+   }
 
    const handleClick = (day: string) => {
       setSelectedLink(day);
    };
 
-   let coursesToShow = [] as Course[];
-   switch (selectedLink) {
-      case 'Quarta':
-         coursesToShow = quarta;
-         break;
-      case 'Quinta':
-         coursesToShow = quinta;
-         break;
-      case 'Sexta':
-         coursesToShow = sexta;
-         break;
-      case 'Todos':
-         coursesToShow = [...quarta, ...quinta, ...sexta];
-         break;
-      default:
-         coursesToShow = [...quarta, ...quinta, ...sexta];
-         break;
+   useEffect(() => {
+      let selectedCourses: Course[] = [];
+
+      switch (selectedLink) {
+         case 'Quarta':
+            selectedCourses = quarta;
+            break;
+         case 'Quinta':
+            selectedCourses = quinta;
+            break;
+         case 'Sexta':
+            selectedCourses = sexta;
+            break;
+         case 'Todos':
+            selectedCourses = [...quarta, ...quinta, ...sexta];
+            break;
+         default:
+            selectedCourses = [];
+      }
+
+      if (isSwitchActivated) {
+         selectedCourses = filterCourses(selectedCourses);
+      }
+
+      setCoursesToShow(selectedCourses);
+   }, [selectedLink, quarta, quinta, sexta, isSwitchActivated]);
+
+   function randomizeCourses(courses: Course[]) {
+      return courses.sort(() => Math.random() - 0.5);
    }
 
    return (
@@ -128,8 +150,18 @@ const MiniCoursesView = ({ quarta, quinta, sexta }: CourseComponentProps) => {
             <a onClick={() => handleClick('Sexta')} className={`flex items-center flex-shrink-0 px-5 py-2 border-b-4 cursor-pointer font-medium ${selectedLink === 'Sexta' ? 'border-y-sky-300' : 'border-gray-800'}`}>sexta</a>
             <a onClick={() => handleClick('Todos')} className={`flex items-center flex-shrink-0 px-5 py-2 border-b-4 cursor-pointer font-medium ${selectedLink === 'Todos' ? 'border-y-sky-300' : 'border-gray-800'}`}>todos</a>
          </div>
+         <div className="text-start grid grid-cols-12" >
+            <div className="bg-gray-400 inline-flex items-center p-2 rounded-md col-start-2 col-span-2">
+               <Switch
+                  className='custom-switch'
+                  onChange={(checked) => setIsSwitchActivated(checked)
+               }
+               />
+               <p className="pl-2">Sou aluno de outro curso!</p>
+            </div>
+         </div>
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-24 mt-6">
-            {coursesToShow.map((course) => (
+            {randomizeCourses(coursesToShow).map((course) => (
                <div>
                   <MiniCourse key={course.id} course={course} />
                </div>

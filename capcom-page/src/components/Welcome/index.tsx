@@ -17,7 +17,7 @@ const Welcome = ({ images }: { images: Image[] }) => {
    };
 
    return (
-      <div className="pt-28" id="Home">
+      <div className="pt-20" id="Home">
          <ScrollView images={images} />
          <div className="pt-28" id="Bemvindo">
             <p className="text-lg pt-2 font-light">Começe hoje a sua jornada para o próximo nível</p>

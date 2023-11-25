@@ -20,12 +20,9 @@ const Header = () => {
    return (
       <header className="lg:flex lg:justify-center">
          <Hamburger />
-         {/*<div className="lg:hidden flex justify-end mt-4 px-6">    
-            <img src="" alt="Logo da EPC" className="w-11 mr-2 " />
-         </div>*/}
-         <div className="hidden lg:flex items-center justify-between fixed bg-gray-200 w-screen z-20 h-28">
+         <div className="hidden lg:flex items-center justify-between fixed bg-gray-50 w-screen z-20 h-20 border-b border-gray-200" >
             <div className="flex items-center gap-7 ml-10 py-3 w-24">
-               <img src={capcomminilogo} alt="Logo da Capcom"/>
+               <img src={capcomminilogo} alt="Logo da Capcom" className="w-3/4"/>
             </div>
             <div className="flex gap-32 font-semibold text-xl mr-20">
                {refs.map((ref) => (
