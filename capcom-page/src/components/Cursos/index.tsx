@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Modal, Switch } from 'antd';
 import Palestrantes from './Palestrantes';
+import { Events, Link, scroller } from 'react-scroll';
 
 type Course = {
    title: string;
@@ -45,7 +46,8 @@ const MiniCourse = ({ course }: { course: Course }) => {
       <div
          className="p-3 border rounded-md mx-16 my-4 cursor-pointer"
          style={{
-            boxShadow: isHovered ? '0 0 10px #11cdf7' : '0 0 3px #959596',
+            //boxShadow: isHovered ? '0 0 10px #11cdf7' : '0 0 3px #959596',
+            boxShadow: isHovered ? `0 0 16px ${course.shadowBackgroundColor}` : '0 0 4px #1fcbff',
          }}
          onMouseEnter={() => setIsHovered(true)}
          onMouseLeave={() => setIsHovered(false)}
@@ -70,24 +72,33 @@ const MiniCourse = ({ course }: { course: Course }) => {
             cancelButtonProps={{ style: { display: 'none' } }}
             className="modal-width"
          >
-            <div className="flex gap-12">
+            <div className="flex flex-col lg:flex-row lg:gap-12 gap-0">
                <div>
                   <h1 className="text-lg font-light">{course.alternativeTitle}</h1>
-                  <p className="text-justify text-sm md:text-lg lg:text-lg font-normal flex-grow pt-8" style={{ flexBasis: '0', flexGrow: '2.5' }}>{course.details}</p>
+                  <p className="text-justify text-base md:text-base lg:text-lg font-normal flex-grow pt-8" style={{ flexBasis: '0', flexGrow: '2.5' }}>{course.details}</p>
                   <h2 className="pt-6 text-lg font-semibold">Pré-Requesitos:</h2>
                   <p className="pt-1">{course.prerequisites}</p>
-                  <button
-                     type="button"
-                     className="px-8 py-3 mt-7 ml-5 font-semibold rounded bg-sky-400 text-black"
-                     onClick={() => {
-                        const element = document.getElementById('Inscricoes');
-                        if (element) element.scrollIntoView({ behavior: 'smooth' });
-                     }}
-                  >
-                     Inscrever-se!
-                  </button>
+                  <div className="flex items-center justify-center lg:block">
+                     <button
+                        type="button"
+                        className="px-8 py-3 mt-7 lg:ml-5 font-semibold rounded bg-sky-400 text-black"
+                        onClick={() => {
+                           Events.scrollEvent.register('end', () => {
+                              setModalOpen(false);
+                              Events.scrollEvent.remove('end');
+                           });
+
+                           scroller.scrollTo('Inscricoes', {
+                              duration: 1500,
+                              smooth: true,
+                           });
+                        }}
+                     >
+                        Inscrever-se!
+                     </button>
+                  </div>
                </div>
-               <div style={{ flexBasis: '0', flexGrow: '1' }}>
+               <div style={{ flexBasis: '0', flexGrow: '1' }} className="mt-12 lg:mt-0">
                   <Palestrantes palestrante1={course.palestrante1} palestrante2={course.palestrante2} />
                </div>
             </div>
@@ -141,26 +152,26 @@ const MiniCoursesView = ({ quarta, quinta, sexta }: CourseComponentProps) => {
    }
 
    return (
-      <div className="flex flex-col justify-center my-24 pb-24 pt-24" id="Minicursos">
+      <div className="flex flex-col justify-center my-24 pb-0 pt-10 lg:pt-24" id="Minicursos">
          <h1 className="text-4xl mt-14"><code>minicursos ofertados</code></h1>
-         <p className="mb-2"><code>14:00 às 18:00 ----- 29/11 até 01/12</code></p>
-         <div className="flex items-center -mx-4 space-x-20 overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap mb-6">
+         <p className="mb-2 text-sm lg:text-base"><code>14:00 às 18:00 ----- 29/11 até 01/12 ----- LCC</code></p>
+         <div className="flex items-center justify-center -mx-4 space-x-[0.5rem] lg:space-x-20 overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap mb-6">
             <a onClick={() => handleClick('Quarta')} className={`flex items-center flex-shrink-0 px-5 py-2 border-b-4 cursor-pointer font-medium ${selectedLink === 'Quarta' ? 'border-y-sky-300' : 'border-gray-800'}`}>quarta</a>
             <a onClick={() => handleClick('Quinta')} className={`flex items-center flex-shrink-0 px-5 py-2 border-b-4 cursor-pointer font-medium ${selectedLink === 'Quinta' ? 'border-y-sky-300' : 'border-gray-800'}`}>quinta</a>
             <a onClick={() => handleClick('Sexta')} className={`flex items-center flex-shrink-0 px-5 py-2 border-b-4 cursor-pointer font-medium ${selectedLink === 'Sexta' ? 'border-y-sky-300' : 'border-gray-800'}`}>sexta</a>
             <a onClick={() => handleClick('Todos')} className={`flex items-center flex-shrink-0 px-5 py-2 border-b-4 cursor-pointer font-medium ${selectedLink === 'Todos' ? 'border-y-sky-300' : 'border-gray-800'}`}>todos</a>
          </div>
-         <div className="text-start grid grid-cols-12" >
-            <div className="flex items-center p-2 rounded-md col-start-3 col-span-3">
+         <div className="text-start lg:grid lg:grid-cols-12" >
+            <div className="flex items-center p-2 rounded-md lg:col-start-3 lg:col-span-3 justify-center lg:justify-normal">
                <Switch
                   className='custom-switch'
                   onChange={(checked) => setIsSwitchActivated(checked)
-               }
+                  }
                />
                <p className="pl-2">Sou aluno de outro curso!</p>
             </div>
          </div>
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-24 mt-6">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:mx-24 mt-6">
             {randomizeCourses(coursesToShow).map((course) => (
                <div>
                   <MiniCourse key={course.id} course={course} />

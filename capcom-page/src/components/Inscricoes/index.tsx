@@ -7,8 +7,8 @@ import tela6 from '../../images/Tela6.png';
 
 const Inscricoes = () => {
    return (
-      <div className="mt-32 pb-56" id="Inscricoes">
-         <h2 className="py-4 text-4xl font-thin text-center mb-4">Como me inscrevo?</h2>
+      <div className="mt-32 pb-24 pt-24" id="Inscricoes">
+         <h2 className="py-4 text-3xl lg:text-4xl font-thin text-center mb-4">Como me inscrevo?</h2>
          <section className="bg-gray-200 text-gray-800 rounded-lg w-4/5 mx-auto">
             <div className="container mx-auto flex flex-col p-6">
                <div className="divide-y divide-gray-300">
@@ -41,13 +41,14 @@ const Inscricoes = () => {
                         <span className="mt-4 text-gray-700 mb-4">Desça a página e insira em '<span className="italic">Instituição</span>' a instituição a qual está vinculado e clique em '<span className="italic font-bold">Confirmar Inscrição</span>'.</span>
                         <span className="pb-1">&gt; Confirmar Inscrição</span>
                         <img src={tela4} className="" />
+                        <span className="mt-8 mb-2 text-gray-700">Agora espere a confirmação de inscrição para prosseguir para o próximo passo!</span>
                      </div>
                   </div>
                   <div className="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
                      <div className="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
                         <span className="text-xs tracki uppercase text-sky-600">Passo 4</span>
                         <span className="text-xl font-bold md:text-2xl">Faça sua inscrição no minicurso</span>
-                        <span className="mt-4 text-gray-700 mb-4">Volte a página inicial, volte a tela de '<span className="italic font-bold">Inscrições abertas</span>'. Em seguida, clique em '<span className="italic font-bold">Visualizar as mini atividades</span>'.</span>
+                        <span className="mt-4 text-gray-700 mb-4">Com a sua inscrição confirmada, volte a página inicial, vá para a tela de '<span className="italic font-bold">Inscrições abertas</span>'. Em seguida, clique em '<span className="italic font-bold">Visualizar as mini atividades</span>'.</span>
                         <span className="pb-1">&gt; Página inicial &gt; Inscrições abertas &gt; Visualizar as mini atividades</span>
                         <img src={tela5} className="" />
                         <span className="mt-8 mb-2 text-gray-700">Escolha seu minicurso e clique em '<span className="italic font-bold">Inscrever-se</span>'.</span>

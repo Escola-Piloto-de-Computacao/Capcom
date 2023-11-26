@@ -4,7 +4,9 @@ import Welcome from './components/Welcome';
 import Cursos from './components/Cursos';
 import Inscricoes from './components/Inscricoes';
 import EPC from './components/EPC';
+import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import BackToTopButton from './components/BackToTopButton';
 import paulo from './images/palestrantes/pauloTeoria.jpeg';
 import pedro from './images/palestrantes/pedroReact.jpeg';
 import artur from './images/palestrantes/ArturPyAuto.png';
@@ -24,6 +26,9 @@ import ryllari from './images/palestrantes/RyllariWebS.jpeg';
 import thiago from './images/palestrantes/ThiagoSpring.jpeg';
 import patrick from './images/palestrantes/PatrickPBI.jpeg';
 import wender from './images/palestrantes/wenderReact.jpeg';
+import valentina from './images/palestrantes/ValentinaGithub.jpeg';
+import thiagoG from './images/palestrantes/ThiagoGithub.jpg';
+import helcio from './images/palestrantes/HelcioUnity.jpeg';
 import { useMediaQuery } from 'react-responsive';
 
 type Course = {
@@ -103,22 +108,22 @@ let courses = [
       publicoGeral: false,
       id: 2,
       palestrante1: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "Valentina Lacerda",
+         frase: "Quanto mais estudo, mais sinto que minha mente nisso é insaciável - Ada Lovelace",
+         foto: valentina,
          instagram: "",
-         linkedin: "",
-         github: ""
+         linkedin: "https://www.linkedin.com/in/thiagohfpereira/",
+         github: "https://github.com/valentinaslacerda"
       },
       palestrante2: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "Thiago Henrique",
+         frase: "talk is cheap, show me the code - Linus Torvalds",
+         foto: thiagoG,
          instagram: "",
          linkedin: "",
-         github: ""
+         github: "https://github.com/ThiagoHenriqueFP"
       }
-   }, //falta info de github ambos
+   },
    {
       title: 'Python Pyautogui',
       alternativeTitle: 'Introdução a automação com Python em Pyautogui',
@@ -228,7 +233,7 @@ let courses = [
          foto: patrick,
          instagram: "",
          linkedin: "",
-         github: ""
+         github: "https://github.com/ErkPatrick/"
       },
       palestrante2: {
          nome: "Lucas Silva",
@@ -238,12 +243,15 @@ let courses = [
          linkedin: "",
          github: "https://github.com/Lucassilv7"
       }
-   }, //falta sociais de patrick
+   },
    {
       title: 'PHP',
       alternativeTitle: 'Laravel: Framework PHP Para desenvolvimento WEB',
-      details: `Nesse minicurso você aprenderá o básico de PhP e a utilizar o
-        framework Laravel para criar aplicações web.`,
+      details: `O Laravel, um framework PHP, destaca-se no desenvolvimento web pela sua elegância e conjunto abrangente de ferramentas. Aprender Laravel é crucial no mercado devido à sua capacidade de aumentar a produtividade. Com recursos como o Eloquent ORM, simplifica a interação com bancos de dados, tornando operações mais eficientes. O sistema de templates Blade e o Artisan Console automatizam tarefas rotineiras, proporcionando uma experiência de desenvolvimento agradável.
+
+Além disso, a comunidade ativa do Laravel oferece suporte contínuo e recursos educacionais. Em termos de segurança, o framework incorpora práticas contra ameaças como injeção SQL e XSS. Sua adesão a padrões modernos, como o modelo MVC, facilita a manutenção do código.
+
+Em resumo, o Laravel oferece eficiência, segurança e uma base sólida para o desenvolvimento web moderno, tornando os desenvolvedores proficientes nesse framework altamente valorizados no mercado de trabalho.`,
       prerequisites: 'Não há pré-requisitos',
       shadowBackgroundColor: '#ff7f00',
       dia: 'Quarta',
@@ -271,8 +279,9 @@ let courses = [
    {
       title: 'Figma',
       alternativeTitle: 'Figma para desenvolvimento web',
-      details: `No minicurso, os alunos vão aprender a usar a ferramenta
-        Figma para fins de designer web, ademais de conceitos básicos sobre web designer.`,
+      details: `No minicurso, os alunos vão aprender a usar a ferramenta Figma para fins de designer web. 
+      Discutiremos conceitos básicos de design para a web, como tipografia, cores e layout. 
+      Ao final do curso, os alunos terão um entendimento sólido de como usar o Figma para projetar interfaces de usuário atraentes e eficazes.`,
       prerequisites: 'Não há pré-requisitos',
       shadowBackgroundColor: '#ff00ff',
       dia: 'Quinta',
@@ -288,7 +297,7 @@ let courses = [
          linkedin: "https://www.linkedin.com/in/william-diniz-praxedes-sales-a79147240/",
          github: ""
       },
-   }, //aumentar descrição
+   },
    {
       title: 'React',
       alternativeTitle: 'Desenvolvimento Web com React Typescript e TailwindCSS',
@@ -307,7 +316,7 @@ let courses = [
       id: 9,
       palestrante1: {
          nome: "Wender Enzo",
-         frase: "Graduando em Ciência da Computação na UFERSA - Mossoró, Focado no desenvolvimento web React e back-end em Django e nodejs",
+         frase: "Graduando em Ciência da Computação na UFERSA, Focado no desenvolvimento web React e back-end em Django e Nodejs",
          foto: wender,
          instagram: "",
          linkedin: "",
@@ -321,7 +330,7 @@ let courses = [
          linkedin: "",
          github: "https://github.com/PepeuFBV"
       }
-   }, //falta info de wender
+   },
    {
       title: 'Python Web Scraping',
       alternativeTitle: 'Encontrando vagas no Linkedin através de raspagem de dados',
@@ -371,17 +380,17 @@ let courses = [
       },
       palestrante2: {
          nome: "Thiago Henrique",
-         frase: "",
-         foto: thiago,
+         frase: "talk is cheap, show me the code - Linus Torvalds",
+         foto: thiagoG,
          instagram: "",
          linkedin: "",
-         github: ""
+         github: "https://github.com/ThiagoHenriqueFP"
       }
-   }, //falta info de thiago
+   },
    {
       title: 'API Rest',
       alternativeTitle: 'Conexão e consumo de API Rest',
-      details: 'Aprenda a criar uma conexão com uma API Rest e como estruturar um service para consumir as informações e exibi-las em uma página web.',
+      details: `Neste minicurso, os participantes aprenderão os fundamentos do desenvolvimento de uma API REST utilizando Node.js. Uma API bem projetada é extremamente valiosa no desenvolvimento de software. Ela permite que diferentes sistemas comuniquem entre si de maneira eficiente e segura. Uma API fácil de usar pode economizar muito tempo e esforço no desenvolvimento e manutenção de software. Portanto, este curso é uma oportunidade imperdível para quem deseja aprimorar suas habilidades em desenvolvimento backend e se destacar no mercado de trabalho. Ao final do curso, os participantes terão um entendimento sólido de como se consumir uma API REST.`,
       prerequisites: 'Lógica de Programação, HTML, CSS e JavaScript',
       shadowBackgroundColor: '#ff00ff',
       dia: 'Sexta',
@@ -397,7 +406,7 @@ let courses = [
          linkedin: "https://www.linkedin.com/in/edson-allencar/",
          github: "https://github.com/Edsonalencar"
       }
-   }, //aumentar descrição
+   },
    {
       title: 'Teoria dos Números',
       alternativeTitle: 'Teoria dos Números: Como se introduzir na matemática computacional',
@@ -438,14 +447,14 @@ let courses = [
       publicoGeral: false,
       id: 14,
       palestrante1: {
-         nome: "",
-         frase: "",
-         foto: "",
+         nome: "Helcio Wagner",
+         frase: "Acho muito deselegante falar sobre si mesmo",
+         foto: helcio,
          instagram: "",
          linkedin: "",
          github: ""
       }
-   }, //pedir a danielle
+   },
    {
       title: "Redes Neurais",
       alternativeTitle: "Sua primeira rede neural sem uma linha de código",
@@ -513,36 +522,15 @@ function App() {
 
    return (
       <div className="App overflow-x-hidden">
-         {isDesktopOrLaptop ? (
-            <>
-               <Header />
-               <Welcome images={scrollViewImages} />
-               <Cursos quarta={Quarta} quinta={Quinta} sexta={Sexta} />
-               <Inscricoes />
-               <EPC />
-               <Footer />
-            </>
-         ) : (
-            <section className="flex items-center h-screen sm:p-16 dark:bg-gray-900 dark:text-gray-100">
-               <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8 space-y-8 text-center sm:max-w-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-40 h-40 dark:text-gray-600">
-                     <path fill="currentColor" d="M256,16C123.452,16,16,123.452,16,256S123.452,496,256,496,496,388.548,496,256,388.548,16,256,16ZM403.078,403.078a207.253,207.253,0,1,1,44.589-66.125A207.332,207.332,0,0,1,403.078,403.078Z"></path>
-                     <rect width="176" height="32" x="168" y="320" fill="currentColor"></rect>
-                     <polygon fill="currentColor" points="210.63 228.042 186.588 206.671 207.958 182.63 184.042 161.37 162.671 185.412 138.63 164.042 117.37 187.958 141.412 209.329 120.042 233.37 143.958 254.63 165.329 230.588 189.37 251.958 210.63 228.042"></polygon>
-                     <polygon fill="currentColor" points="383.958 182.63 360.042 161.37 338.671 185.412 314.63 164.042 293.37 187.958 317.412 209.329 296.042 233.37 319.958 254.63 341.329 230.588 365.37 251.958 386.63 228.042 362.588 206.671 383.958 182.63"></polygon>
-                  </svg>
-                  <p className="text-3xl">Site apenas disponível para computadores por enquanto!</p>
-                  <a
-                     rel="noopener noreferrer"
-                     onClick={() => window.open('http://escolapilotodecomputacao.com.br', '_blank')}
-                     className="px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900"
-                  >
-                     Voltar
-                  </a>
-               </div>
-            </section>
-         )}
-      </div>
+         <Header />
+         <Welcome images={scrollViewImages} />
+         <Cursos quarta={Quarta} quinta={Quinta} sexta={Sexta} />
+         <Inscricoes />
+         <FAQ />
+         <EPC />
+         <Footer />
+         <BackToTopButton />
+      </div >
    );
 }
 
