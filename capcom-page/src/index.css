@@ -64,8 +64,8 @@ body::-webkit-scrollbar-thumb {
 
 .custom-switch {
    background-color: #ff4747;
- }
- 
- .custom-switch.ant-switch-checked {
+}
+
+.custom-switch.ant-switch-checked {
    background-color: #1890ff;
- }
+}

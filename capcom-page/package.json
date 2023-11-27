@@ -16,12 +16,17 @@
       "@types/react": "^18.2.33",
       "@types/react-dom": "^18.2.14",
       "antd": "^5.11.1",
+      "leaflet": "^1.9.4",
       "react": "^18.2.0",
+      "react-bootstrap": "^2.9.1",
       "react-dom": "^18.2.0",
       "react-icons": "^4.12.0",
+      "react-leaflet": "^4.2.1",
+      "react-map-gl": "^7.1.6",
       "react-responsive": "^9.0.2",
       "react-scripts": "5.0.1",
       "react-scroll": "^1.9.0",
+      "reactjs-popup": "^2.0.6",
       "tailwindcss-pseudo-elements": "^2.0.0",
       "typescript": "^4.9.5",
       "web-vitals": "^2.1.4"
@@ -52,6 +57,7 @@
       ]
    },
    "devDependencies": {
+      "@types/react-map-gl": "^6.1.6",
       "@types/react-scroll": "^1.8.10",
       "autoprefixer": "^10.4.16",
       "postcss": "^8.4.31",

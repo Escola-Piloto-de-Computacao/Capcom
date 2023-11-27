@@ -41,12 +41,18 @@ const Inscricoes = () => {
                         <span className="mt-4 text-gray-700 mb-4">Desça a página e insira em '<span className="italic">Instituição</span>' a instituição a qual está vinculado e clique em '<span className="italic font-bold">Confirmar Inscrição</span>'.</span>
                         <span className="pb-1">&gt; Confirmar Inscrição</span>
                         <img src={tela4} className="" />
-                        <span className="mt-8 mb-2 text-gray-700">Agora espere a confirmação de inscrição para prosseguir para o próximo passo!</span>
                      </div>
                   </div>
                   <div className="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
                      <div className="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
                         <span className="text-xs tracki uppercase text-sky-600">Passo 4</span>
+                        <span className="text-xl font-bold md:text-2xl">Aguarde</span>
+                        <span className="mt-4 text-gray-700 mb-4">Espere a sua inscrição ser confirmada pelos coordenadores do evento!</span>
+                     </div>
+                  </div>
+                  <div className="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
+                     <div className="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
+                        <span className="text-xs tracki uppercase text-sky-600">Passo 5</span>
                         <span className="text-xl font-bold md:text-2xl">Faça sua inscrição no minicurso</span>
                         <span className="mt-4 text-gray-700 mb-4">Com a sua inscrição confirmada, volte a página inicial, vá para a tela de '<span className="italic font-bold">Inscrições abertas</span>'. Em seguida, clique em '<span className="italic font-bold">Visualizar as mini atividades</span>'.</span>
                         <span className="pb-1">&gt; Página inicial &gt; Inscrições abertas &gt; Visualizar as mini atividades</span>

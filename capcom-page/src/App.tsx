@@ -23,20 +23,19 @@ import joaog from './images/palestrantes/JoaoSpring.jpeg';
 import edson from './images/palestrantes/EdsonAPI.jpeg';
 import victor from './images/palestrantes/VictorRedes.jpeg';
 import ryllari from './images/palestrantes/RyllariWebS.jpeg';
-import thiago from './images/palestrantes/ThiagoSpring.jpeg';
 import patrick from './images/palestrantes/PatrickPBI.jpeg';
 import wender from './images/palestrantes/wenderReact.jpeg';
 import valentina from './images/palestrantes/ValentinaGithub.jpeg';
 import thiagoG from './images/palestrantes/ThiagoGithub.jpg';
 import helcio from './images/palestrantes/HelcioUnity.jpeg';
-import { useMediaQuery } from 'react-responsive';
 
 type Course = {
    title: string;
    alternativeTitle: string;
-   longerTitle?: string;
    details: string;
+   lab: string;
    prerequisites: string;
+   etiqueta?: string[];
    shadowBackgroundColor: string;
    dia: string;
    data: string;
@@ -70,8 +69,10 @@ let courses = [
         entendimento e montagem.
         Ao final do curso, os alunos construirão um robô capaz de se locomover automaticamente,
         com o auxílio de sensores.`,
+      lab: 'Lab 6',
       prerequisites: 'Não há pré-requisitos',
-      shadowBackgroundColor: '#00ff37',
+      etiqueta: ['Ferramenta'],
+      shadowBackgroundColor: '#fc1e29',
       dia: 'Quarta',
       data: "29/11",
       courseImage: '',
@@ -100,8 +101,10 @@ let courses = [
       longerTitle: 'Git e Github',
       details: `Ensinar a teoria, as aplicacões e boas práticas para a
         ferramenta padrão do mercado, quando se fala em versionamento e controle de código.`,
+      lab: 'Lab 6',
       prerequisites: 'Não há pré-requisitos',
-      shadowBackgroundColor: '#ff0000',
+      etiqueta: ['Versionamento de código'],
+      shadowBackgroundColor: '#000000',
       dia: 'Quinta',
       data: "30/11",
       courseImage: '',
@@ -128,8 +131,10 @@ let courses = [
       title: 'Python Pyautogui',
       alternativeTitle: 'Introdução a automação com Python em Pyautogui',
       details: "Desperte o potencial visual do seu computador com nosso curso envolvente de PyAutoGUI em Python! Em um mergulho fascinante pela visão computacional, você aprenderá a dotar seu sistema com 'olhos' através da poderosa biblioteca PyAutoGUI. Desbrave as fronteiras da automação, desvendando segredos que transformarão sua experiência digital. Junte-se a nós e liberte o poder visual do seu Python!",
+      lab: 'Lab 4',
       prerequisites: 'Introdução a Lógica e Introdução a Programação',
-      shadowBackgroundColor: '#ff00ff',
+      etiqueta: ['Biblioteca', 'Linguagem'],
+      shadowBackgroundColor: '#f2df0a',
       dia: 'Sexta',
       data: "01/12",
       courseImage: '',
@@ -164,8 +169,10 @@ let courses = [
         incluindo estruturas de dados, operações básicas, manipulação de dados e visualização.
         Além disso, serão introduzidos aos pacotes e bibliotecas mais úteis para análise de dados,
         como o ggplot2 para visualização e o dplyr para manipulação de dados.`,
+      lab: 'Lab 4',
       prerequisites: 'Não há pré-requisitos, porém alguma familiaridade com conceitos de estatísticas e programação pode ser útil',
-      shadowBackgroundColor: '#0000ff',
+      etiqueta: ['Linguagem', 'Dados'],
+      shadowBackgroundColor: '#004cff',
       dia: 'Quarta',
       data: "29/11",
       courseImage: '',
@@ -198,8 +205,10 @@ let courses = [
         a utilizar o Pandas para realizar tarefas essenciais, como importar dados, realizar
         operações de filtragem e agregação, visualizar informações estatísticas e muito
         mais.`,
+      lab: 'Lab 4',
       prerequisites: 'Cadeiras \'Introdução a Lógica\' e \'Introdução a Programação\'',
-      shadowBackgroundColor: '#ffff00',
+      etiqueta: ['Biblioteca', 'Dados'],
+      shadowBackgroundColor: '#f2df0a',
       dia: 'Quinta',
       data: "30/11",
       courseImage: '',
@@ -220,8 +229,10 @@ let courses = [
       details: `Aprender a utilizar a ferramenta Power BI de forma a extrair,
         transformar e carregar dados (Processo de ETL (Extract, Transform, Load)). Aprenderemos,
         também, a criar Dashboards para a visualização de dados.`,
+      lab: 'Lab 6',
       prerequisites: 'Não há pré-requisitos',
-      shadowBackgroundColor: '#00ffff',
+      etiqueta: ['Ferramenta', 'Dados'],
+      shadowBackgroundColor: '#f2df0a',
       dia: 'Sexta',
       data: "01/12",
       courseImage: '',
@@ -245,15 +256,13 @@ let courses = [
       }
    },
    {
-      title: 'PHP',
+      title: 'Framework Laravel',
       alternativeTitle: 'Laravel: Framework PHP Para desenvolvimento WEB',
-      details: `O Laravel, um framework PHP, destaca-se no desenvolvimento web pela sua elegância e conjunto abrangente de ferramentas. Aprender Laravel é crucial no mercado devido à sua capacidade de aumentar a produtividade. Com recursos como o Eloquent ORM, simplifica a interação com bancos de dados, tornando operações mais eficientes. O sistema de templates Blade e o Artisan Console automatizam tarefas rotineiras, proporcionando uma experiência de desenvolvimento agradável.
-
-Além disso, a comunidade ativa do Laravel oferece suporte contínuo e recursos educacionais. Em termos de segurança, o framework incorpora práticas contra ameaças como injeção SQL e XSS. Sua adesão a padrões modernos, como o modelo MVC, facilita a manutenção do código.
-
-Em resumo, o Laravel oferece eficiência, segurança e uma base sólida para o desenvolvimento web moderno, tornando os desenvolvedores proficientes nesse framework altamente valorizados no mercado de trabalho.`,
+      details: `O Laravel, um framework PHP, destaca-se no desenvolvimento web pela sua elegância e conjunto abrangente de ferramentas. Aprender Laravel é crucial no mercado devido à sua capacidade de aumentar a produtividade. Com recursos como o Eloquent ORM, simplifica a interação com bancos de dados, tornando operações mais eficientes. O sistema de templates Blade e o Artisan Console automatizam tarefas rotineiras, proporcionando uma experiência de desenvolvimento agradável. Além disso, a comunidade ativa do Laravel oferece suporte contínuo e recursos educacionais. Em termos de segurança, o framework incorpora práticas contra ameaças como injeção SQL e XSS. Sua adesão a padrões modernos, como o modelo MVC, facilita a manutenção do código. Em resumo, o Laravel oferece eficiência, segurança e uma base sólida para o desenvolvimento web moderno, tornando os desenvolvedores proficientes nesse framework altamente valorizados no mercado de trabalho.`,
+      lab: 'Lab 3',
       prerequisites: 'Não há pré-requisitos',
-      shadowBackgroundColor: '#ff7f00',
+      etiqueta: ['Front-end', 'Framework'],
+      shadowBackgroundColor: '#ff0000',
       dia: 'Quarta',
       data: "29/11",
       courseImage: '',
@@ -282,8 +291,10 @@ Em resumo, o Laravel oferece eficiência, segurança e uma base sólida para o d
       details: `No minicurso, os alunos vão aprender a usar a ferramenta Figma para fins de designer web. 
       Discutiremos conceitos básicos de design para a web, como tipografia, cores e layout. 
       Ao final do curso, os alunos terão um entendimento sólido de como usar o Figma para projetar interfaces de usuário atraentes e eficazes.`,
+      lab: 'Lab 5',
       prerequisites: 'Não há pré-requisitos',
-      shadowBackgroundColor: '#ff00ff',
+      etiqueta: ['Front-end', 'Ferramenta'],
+      shadowBackgroundColor: '#c800ff',
       dia: 'Quinta',
       data: "30/11",
       courseImage: '',
@@ -307,8 +318,10 @@ Em resumo, o Laravel oferece eficiência, segurança e uma base sólida para o d
         aprender a integrar o poder do Tailwind CSS e React, criando interfaces responsivas,
         componentes reutilizáveis e adicionando interatividade com animações suaves. Inscreva-se
         agora e transforme suas ideias em interfaces incríveis!`,
+      lab: 'Lab 3',
       prerequisites: 'HTML, CSS e JavaScript',
-      shadowBackgroundColor: '#00ff00',
+      etiqueta: ['Front-End', 'Framework'],
+      shadowBackgroundColor: '#00a6ff',
       dia: 'Sexta',
       data: "01/12",
       courseImage: '',
@@ -340,8 +353,10 @@ Em resumo, o Laravel oferece eficiência, segurança e uma base sólida para o d
         exemplo da busca de vagas no linkedin, iremos aprender o que é web scraping, como
         páginas da web são estruturadas e como podemos criar robôs para realizar raspagem de
         dados delas de maneira fácil, prática e útil (afinal, ter um emprego é sempre bom, né?).`,
+      lab: 'Lab 5',
       prerequisites: 'Python básico (definições de variáveis, tipos, condicionais e lista). Ter noções de HTML e CSS é interessante, mas não necessário',
-      shadowBackgroundColor: '#0000ff',
+      etiqueta: ['Ferramenta'],
+      shadowBackgroundColor: '#f2df0a',
       dia: 'Quarta',
       data: "29/11",
       courseImage: '',
@@ -361,10 +376,12 @@ Em resumo, o Laravel oferece eficiência, segurança e uma base sólida para o d
       alternativeTitle: 'Introdução a programação web com Spring Boot',
       details: `Neste Minicurso será introduzido ao aluno os conceitos básicos para a construção de uma
         API REST utilizando a linguagem Java com o framework Spring Boot, além de apresentar
-        ao aluno os conceito inciais do framework spring boot, o minicurso contará com uma prática
+        ao aluno os conceito iniciais do framework spring boot, o minicurso contará com uma prática
         onde o aluno irá construir uma API REST junto com os instrutores.`,
+      lab: 'Lab 2',
       prerequisites: 'Programação de Computadores e conhecimento básico em Java. É aconselhável as cadeiras de POO, BD e Redes',
-      shadowBackgroundColor: '#ff0000',
+      etiqueta: ['Back-End', 'Framework'],
+      shadowBackgroundColor: '#00ff4c',
       dia: 'Quarta',
       data: "29/11",
       courseImage: '',
@@ -390,9 +407,11 @@ Em resumo, o Laravel oferece eficiência, segurança e uma base sólida para o d
    {
       title: 'API Rest',
       alternativeTitle: 'Conexão e consumo de API Rest',
-      details: `Neste minicurso, os participantes aprenderão os fundamentos do desenvolvimento de uma API REST utilizando Node.js. Uma API bem projetada é extremamente valiosa no desenvolvimento de software. Ela permite que diferentes sistemas comuniquem entre si de maneira eficiente e segura. Uma API fácil de usar pode economizar muito tempo e esforço no desenvolvimento e manutenção de software. Portanto, este curso é uma oportunidade imperdível para quem deseja aprimorar suas habilidades em desenvolvimento backend e se destacar no mercado de trabalho. Ao final do curso, os participantes terão um entendimento sólido de como se consumir uma API REST.`,
+      details: `Neste minicurso, os participantes aprenderão de uma vez por todas como funciona a ponte entre Front e Back. Entenderão os fundamentos de uma Rest API, incluindo o Protocolo HTTP e as melhores práticas na construção de services para conexão e consumo destas APIs. Este é um conhecimento essencial para um desenvolvedor Front End que deseja um lugar no mercado de trabalho.`,
+      lab: 'Lab 5',
       prerequisites: 'Lógica de Programação, HTML, CSS e JavaScript',
-      shadowBackgroundColor: '#ff00ff',
+      etiqueta: ['Front-end', 'Back-End', 'API'],
+      shadowBackgroundColor: '#00d5ff',
       dia: 'Sexta',
       data: "01/12",
       courseImage: '',
@@ -411,8 +430,10 @@ Em resumo, o Laravel oferece eficiência, segurança e uma base sólida para o d
       title: 'Teoria dos Números',
       alternativeTitle: 'Teoria dos Números: Como se introduzir na matemática computacional',
       details: "No minicurso de Teoria dos Números será apresentada umas das áreas mais puras da matemática. Na aula, as operações e características básicas dos números inteiros serão construídas com axiomas e provas formais, demonstrando os fundamentos que constroem as exatas. Além disso, será feita uma contextualização do conteúdo com a matemática computacional em tópicos como bases numéricas, operações aritméticas e mais.",
+      lab: 'Sala Multimídia',
       prerequisites: 'Não há pré-requisitos',
-      shadowBackgroundColor: '#00ffff',
+      etiqueta: ['Matemática'],
+      shadowBackgroundColor: '#1100ff',
       dia: 'Quinta',
       data: "30/11",
       courseImage: '',
@@ -439,8 +460,10 @@ Em resumo, o Laravel oferece eficiência, segurança e uma base sólida para o d
         que, vinculados a um gameobject, permitem a ele se movimentar, interagir com os demais
         objetos e emitir sons; projeto e construção de um HUD (Head-Up Display) para o jogo;
         instalação do jogo em uma determinada plataforma.`,
+      lab: 'Lab 2',
       prerequisites: 'Cadeira \'Programação de Computadores\'. Recomenda-se fortemente conhecimento em POO (Programação Orientada a Objetos)',
-      shadowBackgroundColor: '#0000ff',
+      etiqueta: ['Ferramenta', 'Jogos'],
+      shadowBackgroundColor: '#000000',
       dia: 'Quinta',
       data: "30/11",
       courseImage: '',
@@ -463,8 +486,10 @@ Em resumo, o Laravel oferece eficiência, segurança e uma base sólida para o d
       Aprenderemos sobre criação de database, divisão entre teste/treino/validação, como utilizar
       o celular para fomentar o database, como é a arquitetura de uma NN (Neural Network), e
       muito mais! Tudo isso, sem a necessidade de uma linha de código.`,
+      lab: 'Lab 2',
       prerequisites: "Não há pré-requisitos",
-      shadowBackgroundColor: '',
+      etiqueta: ['IA', 'Ferramenta'],
+      shadowBackgroundColor: '#000000',
       dia: 'Sexta',
       data: "01/12",
       courseImage: '',
@@ -498,7 +523,7 @@ let scrollViewImages = [
 
 function addCourses(quarta: Course[] = [], quinta: Course[] = [], sexta: Course[] = []) {
 
-   for (let course of courses)
+   for (let course of courses) {
       if (course.dia === 'Quarta') {
          quarta.push(course);
       } else if (course.dia === 'Quinta') {
@@ -506,19 +531,16 @@ function addCourses(quarta: Course[] = [], quinta: Course[] = [], sexta: Course[
       } else if (course.dia === 'Sexta') {
          sexta.push(course);
       }
+   }
 }
 
 function App() {
-   const isDesktopOrLaptop = useMediaQuery({
-      query: '(min-device-width: 768px)'
-   });
 
    const Quarta: Course[] = [];
    const Quinta: Course[] = [];
    const Sexta: Course[] = [];
 
    addCourses(Quarta, Quinta, Sexta);
-
 
    return (
       <div className="App overflow-x-hidden">
