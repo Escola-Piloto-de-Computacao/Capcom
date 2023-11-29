@@ -13,7 +13,7 @@ import artur from './images/palestrantes/ArturPyAuto.png';
 import vinicius from './images/palestrantes/ViniciusPyAuto.jpeg';
 import joao from './images/palestrantes/JoaoRobotica.jpeg';
 import sarah from './images/palestrantes/SarahRobotica.jpeg';
-import lucas from './images/palestrantes/LucasR.jpg';
+import lucas from './images/palestrantes/LucasR.jpeg';
 import joas from './images/palestrantes/JoasR.jpg';
 import clara from './images/palestrantes/ClaraPandas.jpg';
 import caio from './images/palestrantes/caioPHP.jpg';
@@ -115,7 +115,7 @@ let courses = [
          frase: "Quanto mais estudo, mais sinto que minha mente nisso é insaciável - Ada Lovelace",
          foto: valentina,
          instagram: "",
-         linkedin: "https://www.linkedin.com/in/thiagohfpereira/",
+         linkedin: "",
          github: "https://github.com/valentinaslacerda"
       },
       palestrante2: {
@@ -123,7 +123,7 @@ let courses = [
          frase: "talk is cheap, show me the code - Linus Torvalds",
          foto: thiagoG,
          instagram: "",
-         linkedin: "",
+         linkedin: "https://www.linkedin.com/in/thiagohfpereira/",
          github: "https://github.com/ThiagoHenriqueFP"
       }
    },
@@ -183,7 +183,7 @@ let courses = [
          frase: "Técnico em Informática pelo IFRN,  aluno do 2° período de Ciência da Computação UFERSA",
          foto: lucas,
          instagram: "",
-         linkedin: "",
+         linkedin: "https://www.linkedin.com/in/lucas-silva0111/",
          github: "https://github.com/Lucassilv7"
       },
       palestrante2: {
@@ -410,7 +410,7 @@ let courses = [
       details: `Neste minicurso, os participantes aprenderão de uma vez por todas como funciona a ponte entre Front e Back. Entenderão os fundamentos de uma Rest API, incluindo o Protocolo HTTP e as melhores práticas na construção de services para conexão e consumo destas APIs. Este é um conhecimento essencial para um desenvolvedor Front End que deseja um lugar no mercado de trabalho.`,
       lab: 'Lab 5',
       prerequisites: 'Lógica de Programação, HTML, CSS e JavaScript',
-      etiqueta: ['Front-end', 'Back-End', 'API'],
+      etiqueta: ['Front-end', 'API'],
       shadowBackgroundColor: '#00d5ff',
       dia: 'Sexta',
       data: "01/12",

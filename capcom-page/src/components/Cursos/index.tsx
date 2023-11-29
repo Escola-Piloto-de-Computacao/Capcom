@@ -83,7 +83,7 @@ const MiniCourse = ({ course }: { course: Course }) => {
                <div>
                   <h1 className="text-lg font-light">{course.alternativeTitle}</h1>
                   <p className="text-justify text-base md:text-base lg:text-lg font-normal flex-grow pt-8" style={{ flexBasis: '0', flexGrow: '2.5' }}>{course.details}</p>
-                  <h2 className="pt-6 text-lg font-semibold">Pré-Requesitos:</h2>
+                  <h2 className="pt-6 text-lg font-semibold">Pré-Requisitos:</h2>
                   <p className="pt-1">{course.prerequisites}</p>
                   <div className="flex items-center justify-center lg:block">
                      <button
